@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity
 
     private CountDownTask _countdownTask;
 
-    private String _serverUrlString = "http://www.joozey.nl/mooiezon/index.php";
+    private String _serverUrlString = "http://www.sterrenkunde.nl/opendatabattle/index.php";
 
     private TextView _untilNextTimeText;
     private TextView _blueHourTimeText;

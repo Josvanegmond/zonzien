@@ -9,11 +9,34 @@
         <item name="android:windowActionBarOverlay">true</item>
         <item name="android:fitsSystemWindows">false</item>
     </style>
+
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="SkyBlock">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:adjustViewBounds">false</item>
+    </style>
+
+    <style name="SkyBlockA" parent="SkyBlock">
+        <item name="android:layout_height">@dimen/gridCellAHeight</item>
+    </style>
+
+    <style name="SkyBlockB" parent="SkyBlock">
+        <item name="android:layout_height">@dimen/gridCellBHeight</item>
+    </style>
+
+    <style name="SkyBlockC" parent="SkyBlock">
+        <item name="android:layout_height">@dimen/gridCellCHeight</item>
+    </style>
 
 </resources>

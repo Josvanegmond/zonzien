@@ -1,4 +1,4 @@
-package nl.sterrenkunde.mooiezon;
+package nl.sterrenkunde.avondrood;
 
 import org.junit.Test;
 

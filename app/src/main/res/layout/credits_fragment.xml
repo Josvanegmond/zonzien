@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <nl.sterrenkunde.zonno.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal"
+            android:text="Credits"
+            android:textColor="@android:color/black"
+            android:textSize="50sp"
+            app:typeface="SinkinSans-100Thin.ttf" />
+
+        <nl.sterrenkunde.zonno.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="Team"
+            android:textColor="@android:color/black"
+            android:textSize="26sp"
+            app:typeface="SinkinSans-100Thin.ttf" />
+
+        <nl.sterrenkunde.zonno.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="Ramon van der Hilst   -   Subject Matter Expert"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            app:typeface="SinkinSans-100Thin.ttf" />
+
+        <nl.sterrenkunde.zonno.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="Juliette Verberk   -   Designer"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            app:typeface="SinkinSans-100Thin.ttf" />
+
+        <nl.sterrenkunde.zonno.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="Rafael Mosterd   -   Subject Matter Expert"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            app:typeface="SinkinSans-100Thin.ttf" />
+
+        <nl.sterrenkunde.zonno.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="Jos van Egmond   -   Developer"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            app:typeface="SinkinSans-100Thin.ttf" />
+
+
+
+
+        <nl.sterrenkunde.zonno.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal"
+            android:text="Initiator"
+            android:textColor="@android:color/black"
+            android:textSize="26sp"
+            app:typeface="SinkinSans-100Thin.ttf" />
+
+        <nl.sterrenkunde.zonno.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="Rijkswaterstaat"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            app:typeface="SinkinSans-100Thin.ttf" />
+
+
+
+
+        <nl.sterrenkunde.zonno.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal"
+            android:text="Data providers"
+            android:textColor="@android:color/black"
+            android:textSize="26sp"
+            app:typeface="SinkinSans-100Thin.ttf" />
+
+        <nl.sterrenkunde.zonno.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="KNMI"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            app:typeface="SinkinSans-100Thin.ttf" />
+
+        <nl.sterrenkunde.zonno.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="Rijkswaterstaat"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            app:typeface="SinkinSans-100Thin.ttf" />
+
+
+
+
+        <nl.sterrenkunde.zonno.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal"
+            android:text="Support"
+            android:textColor="@android:color/black"
+            android:textSize="26sp"
+            app:typeface="SinkinSans-100Thin.ttf" />
+
+        <nl.sterrenkunde.zonno.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="Paul Dekkers   -   Technical Support"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            app:typeface="SinkinSans-100Thin.ttf" />
+
+        <nl.sterrenkunde.zonno.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="Jongerenwerkgroep Sterrenkunde"
+            android:textColor="@android:color/black"
+            android:textSize="13sp"
+            android:layout_marginBottom="40dp"
+            app:typeface="SinkinSans-100Thin.ttf" />
+
+    </LinearLayout>
+</ScrollView>

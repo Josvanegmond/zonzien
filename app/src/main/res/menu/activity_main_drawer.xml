@@ -6,8 +6,6 @@
             android:title="Dashboard" />
         <item android:id="@+id/nav_tutorial" android:icon="@drawable/ic_menu_slideshow"
             android:title="Tutorial" />
-        <item android:id="@+id/nav_photos" android:icon="@drawable/ic_menu_camera"
-            android:title="Ingezonden fotos" />
         <item android:id="@+id/nav_pro" android:icon="@drawable/ic_toggle_star_outline"
             android:title="Pro versie" />
         <item android:id="@+id/nav_credits" android:icon="@drawable/ic_social_plus_one"

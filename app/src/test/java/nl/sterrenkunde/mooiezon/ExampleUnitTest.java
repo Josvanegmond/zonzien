@@ -1,4 +1,4 @@
-package nl.sterrenkunde.avondrood;
+package nl.sterrenkunde.zonno;
 
 import org.junit.Test;
 

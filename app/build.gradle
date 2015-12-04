@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "nl.sterrenkunde.avondrood"
+        applicationId "nl.sterrenkunde.zonno"
         minSdkVersion 16
         targetSdkVersion 23
         versionCode 1

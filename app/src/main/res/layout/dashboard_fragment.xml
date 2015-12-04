@@ -18,88 +18,162 @@
             android:layout_gravity="top"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:paddingBottom="@dimen/activity_vertical_margin"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:paddingTop="@dimen/activity_vertical_margin"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            tools:context="nl.sterrenkunde.avondrood.MainActivity">
+            tools:context="nl.sterrenkunde.zonno.MainActivity">
 
-            <nl.sterrenkunde.avondrood.widget.TextView
-                android:id="@+id/untilNextTimeText"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="@string/loadingData"
-                android:textColor="@android:color/black"
-                android:textSize="50sp"
-                app:typeface="SinkinSans-100Thin.ttf" />
+                android:background="@drawable/lightblue_gradient"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="20dp">
 
-            <nl.sterrenkunde.avondrood.widget.TextView
-                android:id="@+id/nextEventText"
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/zonnokompas" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:orientation="vertical">
+
+                    <nl.sterrenkunde.zonno.widget.TextView
+                        android:id="@+id/untilNextTimeText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:paddingRight="30dp"
+                        android:text="@string/loadingData"
+                        android:textColor="@android:color/black"
+                        android:textSize="32sp"
+                        app:typeface="SinkinSans-200XLight.ttf" />
+
+                    <nl.sterrenkunde.zonno.widget.TextView
+                        android:id="@+id/nextEventText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/untilNextTimeText"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:paddingRight="30dp"
+                        android:text="@string/untilNextText"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        app:typeface="SinkinSans-200XLight.ttf" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:gravity="center_horizontal"
-                android:text="@string/untilNextText"
-                android:textColor="@android:color/black"
-                android:textSize="20sp"
-                app:typeface="SinkinSans-100Thin.ttf" />
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp">
 
-            <nl.sterrenkunde.avondrood.widget.ImageTableLayout
-                android:orientation="vertical"
+                <nl.sterrenkunde.zonno.widget.TextView
+                    android:id="@+id/sunsetStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="16:34"
+                    app:typeface="SinkinSans-400Regular.ttf" />
+
+                <nl.sterrenkunde.zonno.widget.TextView
+                    android:id="@+id/sunsetEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:text="17:59"
+                    app:typeface="SinkinSans-400Regular.ttf" />
+            </RelativeLayout>
+
+            <nl.sterrenkunde.zonno.widget.ImageTableLayout
+                android:id="@+id/colorTable"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:id="@+id/colorTable"
+                android:orientation="vertical"
                 android:stretchColumns="0,1,2,3,4,5,6,7">
 
                 <LinearLayout
-                    android:orientation="horizontal"
+                    android:id="@+id/highLayer"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/gridCellAHeight"
-                    android:id="@+id/highLayer">
-                    <ImageView style="@style/SkyBlockA"
-                        android:src="@drawable/fluffy"/>
-                    <ImageView style="@style/SkyBlockA"/>
-                    <ImageView style="@style/SkyBlockA"/>
-                    <ImageView style="@style/SkyBlockA"/>
-                    <ImageView style="@style/SkyBlockA"/>
-                    <ImageView style="@style/SkyBlockA"/>
-                    <ImageView style="@style/SkyBlockA"/>
-                    <ImageView style="@style/SkyBlockA"/>
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        style="@style/SkyBlockA"
+                        android:src="@drawable/fluffy" />
+
+                    <ImageView style="@style/SkyBlockA" />
+
+                    <ImageView style="@style/SkyBlockA" />
+
+                    <ImageView style="@style/SkyBlockA" />
+
+                    <ImageView style="@style/SkyBlockA" />
+
+                    <ImageView style="@style/SkyBlockA" />
+
+                    <ImageView style="@style/SkyBlockA" />
+
+                    <ImageView style="@style/SkyBlockA" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:orientation="horizontal"
+                    android:id="@+id/lowLayer"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/gridCellBHeight"
-                    android:id="@+id/lowLayer">
-                    <ImageView style="@style/SkyBlockB"/>
-                    <ImageView style="@style/SkyBlockB"/>
-                    <ImageView style="@style/SkyBlockB"/>
-                    <ImageView style="@style/SkyBlockB"/>
-                    <ImageView style="@style/SkyBlockB"/>
-                    <ImageView style="@style/SkyBlockB"/>
-                    <ImageView style="@style/SkyBlockB"/>
-                    <ImageView style="@style/SkyBlockB"/>
+                    android:orientation="horizontal">
+
+                    <ImageView style="@style/SkyBlockB" />
+
+                    <ImageView style="@style/SkyBlockB" />
+
+                    <ImageView style="@style/SkyBlockB" />
+
+                    <ImageView style="@style/SkyBlockB" />
+
+                    <ImageView style="@style/SkyBlockB" />
+
+                    <ImageView style="@style/SkyBlockB" />
+
+                    <ImageView style="@style/SkyBlockB" />
+
+                    <ImageView style="@style/SkyBlockB" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:orientation="horizontal"
+                    android:id="@+id/horizonLayer"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/gridCellCHeight"
-                    android:id="@+id/horizonLayer">
-                    <ImageView style="@style/SkyBlockC"/>
-                    <ImageView style="@style/SkyBlockC"/>
-                    <ImageView style="@style/SkyBlockC"/>
-                    <ImageView style="@style/SkyBlockC"/>
-                    <ImageView style="@style/SkyBlockC"/>
-                    <ImageView style="@style/SkyBlockC"/>
-                    <ImageView style="@style/SkyBlockC"/>
-                    <ImageView style="@style/SkyBlockC"/>
+                    android:orientation="horizontal">
+
+                    <ImageView style="@style/SkyBlockC" />
+
+                    <ImageView style="@style/SkyBlockC" />
+
+                    <ImageView style="@style/SkyBlockC" />
+
+                    <ImageView style="@style/SkyBlockC" />
+
+                    <ImageView style="@style/SkyBlockC" />
+
+                    <ImageView style="@style/SkyBlockC" />
+
+                    <ImageView style="@style/SkyBlockC" />
+
+                    <ImageView style="@style/SkyBlockC" />
                 </LinearLayout>
-            </nl.sterrenkunde.avondrood.widget.ImageTableLayout>
+            </nl.sterrenkunde.zonno.widget.ImageTableLayout>
 
             <ImageButton
                 android:id="@+id/fabRefreshButton"
@@ -108,41 +182,128 @@
                 android:layout_gravity="end"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/design_fab_background"
-                android:backgroundTint="#ffdd77"
-                android:padding="12dp"
+                android:backgroundTint="@android:color/white"
                 android:scaleType="fitCenter"
                 android:src="@drawable/refresh" />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/bottomInfoContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp">
 
-            <nl.sterrenkunde.avondrood.widget.TextView
-                android:id="@+id/goldenHourTimeText"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:gravity="center_horizontal"
-                android:text="@string/loadingData"
-                android:textColor="@android:color/black"
-                android:textSize="20sp"
-                app:typeface="SinkinSans-100Thin.ttf" />
+                android:orientation="vertical"
+                android:layout_weight="1">
 
-            <nl.sterrenkunde.avondrood.widget.TextView
-                android:id="@+id/blueHourTimeText"
-                android:layout_width="match_parent"
+                <nl.sterrenkunde.zonno.widget.TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="left"
+                    android:text="@string/goldenHourText"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    app:typeface="SinkinSans-200XLight.ttf" />
+
+                <nl.sterrenkunde.zonno.widget.TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="left"
+                    android:text="@string/sunSetStarts"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    app:typeface="SinkinSans-200XLight.ttf" />
+
+                <nl.sterrenkunde.zonno.widget.TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="left"
+                    android:text="@string/blueHourText"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    app:typeface="SinkinSans-200XLight.ttf" />
+
+                <nl.sterrenkunde.zonno.widget.TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="left"
+                    android:text="@string/sunSetEnds"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    app:typeface="SinkinSans-200XLight.ttf" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bottomInfoContainer"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:gravity="center_horizontal"
-                android:text="@string/loadingData"
-                android:textColor="@android:color/black"
-                android:textSize="20sp"
-                app:typeface="SinkinSans-100Thin.ttf" />
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <nl.sterrenkunde.zonno.widget.TextView
+                    android:id="@+id/goldenHourTimeText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/loadingData"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    app:typeface="SinkinSans-200XLight.ttf" />
+
+                <nl.sterrenkunde.zonno.widget.TextView
+                    android:id="@+id/sunsetStartText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/loadingData"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    app:typeface="SinkinSans-200XLight.ttf" />
+
+                <nl.sterrenkunde.zonno.widget.TextView
+                    android:id="@+id/blueHourTimeText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/loadingData"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    app:typeface="SinkinSans-200XLight.ttf" />
+
+                <nl.sterrenkunde.zonno.widget.TextView
+                    android:id="@+id/sunsetEndText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/loadingData"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    app:typeface="SinkinSans-200XLight.ttf" />
+            </LinearLayout>
         </LinearLayout>
+
+        <Button
+            android:id="@+id/uploadPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/redyellowred_gradient"
+            android:text="Upload jouw zonsondergang"
+            android:textColor="@android:color/white" />
+
     </LinearLayout>
 </ScrollView>

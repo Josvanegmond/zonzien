@@ -12,6 +12,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import nl.sterrenkunde.zonno.Config;
+
 /**
  * Created by mint on 28-11-15.
  */
@@ -26,6 +28,9 @@ public enum MZAPIClient {
         DUMMY,
         NEXT_EVENT
     }
+
+    private String headerAppVersion = "X-App-Version"; //1.1, ...
+    private String headerAppPlatform = "X-App-Platform"; //AndroidTablet, AndroidPhone, IOSTablet, IOSPhone
 
     public void request(final Request request, String lon, String lat, final APICallback apiCallback) {
         new AsyncTask<String, Void, JSONObject>() {
@@ -92,6 +97,8 @@ public enum MZAPIClient {
         try {
             URL url = new URL(urlString);
             urlConnection = (HttpURLConnection) url.openConnection();
+            urlConnection.setRequestProperty(headerAppVersion, Config.platform);
+            urlConnection.setRequestProperty(headerAppVersion, Config.version);
             urlConnection.setConnectTimeout(5000);
             urlConnection.setReadTimeout(5000);
             int urlConnectionResponseCode = urlConnection.getResponseCode();

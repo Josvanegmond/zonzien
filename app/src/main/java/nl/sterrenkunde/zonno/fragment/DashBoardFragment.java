@@ -22,6 +22,7 @@ import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 import nl.sterrenkunde.zonno.R;
 import nl.sterrenkunde.zonno.api.APICallback;
@@ -44,10 +45,10 @@ public class DashBoardFragment extends Fragment {
     private TextView _blueHourTimeText;
     private TextView _goldenHourTimeText;
     private TextView _sunsetStartText;
-    private TextView _sunsetEndText;
     private TextView _sunsetMiddle;
     private TextView _sunsetStart;
     private TextView _sunsetEnd;
+    private TextView _dateText;
     private ImageButton _fabRefreshButton;
     private ImageTableLayout _colorTableLayout;
     private Button _uploadPhoto;
@@ -60,18 +61,18 @@ public class DashBoardFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.dashboard_fragment, container, false);
 
-        _untilNextTimeText = (TextView)view.findViewById(R.id.untilNextTimeText);
-        _untilNextEventText = (TextView)view.findViewById(R.id.untilNextEventText);
-        _blueHourTimeText = (TextView)view.findViewById(R.id.blueHourTimeText);
-        _goldenHourTimeText = (TextView)view.findViewById(R.id.goldenHourTimeText);
-        _sunsetStartText = (TextView)view.findViewById(R.id.sunsetStartText);
-        _sunsetEndText = (TextView)view.findViewById(R.id.sunsetEndText);
-        _sunsetStart = (TextView)view.findViewById(R.id.sunsetStart);
-        _sunsetMiddle = (TextView)view.findViewById(R.id.sunsetMiddle);
-        _sunsetEnd = (TextView)view.findViewById(R.id.sunsetEnd);
-        _fabRefreshButton = (ImageButton)view.findViewById(R.id.fabRefreshButton);
-        _colorTableLayout = (ImageTableLayout)view.findViewById(R.id.colorTable);
-        _uploadPhoto = (Button)view.findViewById(R.id.uploadPhoto);
+        _untilNextTimeText = (TextView) view.findViewById(R.id.untilNextTimeText);
+        _untilNextEventText = (TextView) view.findViewById(R.id.untilNextEventText);
+        _blueHourTimeText = (TextView) view.findViewById(R.id.blueHourTimeText);
+        _goldenHourTimeText = (TextView) view.findViewById(R.id.goldenHourTimeText);
+        _sunsetStartText = (TextView) view.findViewById(R.id.sunsetStartText);
+        _sunsetStart = (TextView) view.findViewById(R.id.goldenHourStart);
+        _sunsetMiddle = (TextView) view.findViewById(R.id.sunsetStart);
+        _sunsetEnd = (TextView) view.findViewById(R.id.sunsetEnd);
+        _fabRefreshButton = (ImageButton) view.findViewById(R.id.fabRefreshButton);
+        _colorTableLayout = (ImageTableLayout) view.findViewById(R.id.colorTable);
+        _uploadPhoto = (Button) view.findViewById(R.id.uploadPhoto);
+        _dateText = (TextView) view.findViewById(R.id.dateText);
 
         _uploadPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,24 +111,24 @@ public class DashBoardFragment extends Fragment {
 
     private Drawable getCloud(String type, Integer color) {
         Drawable cloudDrawable = null;
-        int randomNumber = (int)(Math.random() * 2);
+        int randomNumber = (int) (Math.random() * 2);
         if ("broken".equals(type)) {
             if (randomNumber == 0) {
-                cloudDrawable = ContextCompat.getDrawable(getContext(), R.drawable.broken1);
+                cloudDrawable = ContextCompat.getDrawable(getContext(), R.drawable.cloud);
             } else {
-                cloudDrawable = ContextCompat.getDrawable(getContext(), R.drawable.broken2);
+                cloudDrawable = ContextCompat.getDrawable(getContext(), R.drawable.cloud);
             }
         } else if ("fluffy".equals(type)) {
-            if(randomNumber == 0) {
-                cloudDrawable = ContextCompat.getDrawable(getContext(), R.drawable.fluffy1);
+            if (randomNumber == 0) {
+                cloudDrawable = ContextCompat.getDrawable(getContext(), R.drawable.cloud);
             } else {
-                cloudDrawable = ContextCompat.getDrawable(getContext(), R.drawable.fluffy2);
+                cloudDrawable = ContextCompat.getDrawable(getContext(), R.drawable.cloud);
             }
         } else if ("deck".equals(type)) {
-            if(randomNumber == 0) {
-                cloudDrawable = ContextCompat.getDrawable(getContext(), R.drawable.deck1);
+            if (randomNumber == 0) {
+                cloudDrawable = ContextCompat.getDrawable(getContext(), R.drawable.cloud);
             } else {
-                cloudDrawable = ContextCompat.getDrawable(getContext(), R.drawable.deck2);
+                cloudDrawable = ContextCompat.getDrawable(getContext(), R.drawable.cloud);
             }
         }
 
@@ -185,17 +186,16 @@ public class DashBoardFragment extends Fragment {
 
                     _untilNextEventText.setText(getString(R.string.untilNextEventText, _getEventName(event)));
 
-                    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm");
-                    String sunsetMiddle = String.valueOf(simpleDateFormat.format(new Date((simpleDateFormat.parse(sunsetStart).getTime() + simpleDateFormat.parse(blueHour).getTime()) / 2)));
+                    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("cccc d MMMM", new Locale("nl", "NL"));
+                    _dateText.setText(simpleDateFormat.format(new Date(System.currentTimeMillis())));
 
-                    _sunsetStart.setText(sunsetStart);
-                    _sunsetMiddle.setText(sunsetMiddle);
+                    _sunsetStart.setText(goldenHour);
+                    _sunsetMiddle.setText(sunsetStart);
                     _sunsetEnd.setText(blueHour);
 
-                    _blueHourTimeText.setText(blueHour);
-                    _sunsetStartText.setText(sunsetStart);
                     _goldenHourTimeText.setText(goldenHour);
-                    _sunsetEndText.setText(blueHour);
+                    _sunsetStartText.setText(sunsetStart);
+                    _blueHourTimeText.setText(blueHour);
 
                 } catch (Exception e) {
                     _untilNextTimeText.setText(getString(R.string.noDataAvailable));

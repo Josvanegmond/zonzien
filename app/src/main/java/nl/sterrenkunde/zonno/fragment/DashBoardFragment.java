@@ -1,5 +1,8 @@
 package nl.sterrenkunde.zonno.fragment;
 
+import android.app.Dialog;
+import android.app.DialogFragment;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
@@ -7,15 +10,14 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.graphics.drawable.DrawableCompat;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -49,9 +51,9 @@ public class DashBoardFragment extends Fragment {
     private TextView _sunsetStart;
     private TextView _sunsetEnd;
     private TextView _dateText;
+    private TextView _disclaimerText;
     private ImageButton _fabRefreshButton;
     private ImageTableLayout _colorTableLayout;
-    private Button _uploadPhoto;
 
     private String _etaTimeString;
 
@@ -59,7 +61,7 @@ public class DashBoardFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.dashboard_fragment, container, false);
+        final View view = inflater.inflate(R.layout.dashboard_fragment, container, false);
 
         _untilNextTimeText = (TextView) view.findViewById(R.id.untilNextTimeText);
         _untilNextEventText = (TextView) view.findViewById(R.id.untilNextEventText);
@@ -71,13 +73,25 @@ public class DashBoardFragment extends Fragment {
         _sunsetEnd = (TextView) view.findViewById(R.id.sunsetEnd);
         _fabRefreshButton = (ImageButton) view.findViewById(R.id.fabRefreshButton);
         _colorTableLayout = (ImageTableLayout) view.findViewById(R.id.colorTable);
-        _uploadPhoto = (Button) view.findViewById(R.id.uploadPhoto);
         _dateText = (TextView) view.findViewById(R.id.dateText);
-
-        _uploadPhoto.setOnClickListener(new View.OnClickListener() {
+        _disclaimerText = (TextView) view.findViewById(R.id.disclaimerText);
+        _disclaimerText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(DashBoardFragment.this.getContext(), "Bekijk de pro versie voor deze feature!", Toast.LENGTH_SHORT).show();
+                new DialogFragment() {
+                    @Override
+                    public Dialog onCreateDialog(Bundle savedInstanceState) {
+                        // Use the Builder class for convenient dialog construction
+                        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                        builder.setMessage(R.string.disclaimer)
+                                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                    }
+                                });
+                        // Create the AlertDialog object and return it
+                        return builder.create();
+                    }
+                }.show(getActivity().getFragmentManager(), "disclaimer");
             }
         });
 

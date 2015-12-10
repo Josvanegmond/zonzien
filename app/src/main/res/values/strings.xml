@@ -15,6 +15,8 @@
     <string name="loadingData">Laden...</string>
     <string name="noDataAvailable">Geen data</string>
     <string name="errorRetrievingData">Geen connectie</string>
+    <string name="disclaimer">De voorspellingen in deze app berusten niet altijd op waarheid en van de accuraatheid en beschikbaarheid kunnen geen rechten worden ontleend. De voorspellingen berusten momenteel alleen op data gemeten in omgeving Utrecht.\n\nDeze app is gemaakt voor de OpenDataBattle van Rijkswaterstaat. Deze is geëindigd op 9 December 2015. Updates op deze app zullen tot versie 1.1 slechts visuele of technische verbeteringen zijn. We kijken naar functionele verbeteringen in de toekomst en horen graag uw feedback op zonno@sterrenkunde.nl.</string>
+    <string name="open_disclaimer">Open disclaimer</string>
 
     <string-array name="eventNameText">
         <item>Zonsopkomst</item>

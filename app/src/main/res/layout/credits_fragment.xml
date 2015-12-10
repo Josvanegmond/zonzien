@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:gravity="center_horizontal"
-            android:text="Ramon van der Hilst   -   Subject Matter Expert"
+            android:text="R. van der Hilst   -   Analist"
             android:textColor="@android:color/black"
             android:textSize="13sp"
             app:typeface="SinkinSans-100Thin.ttf" />
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center_horizontal"
-            android:text="Juliette Verberk   -   Designer"
+            android:text="J. Verberk   -   Designer"
             android:textColor="@android:color/black"
             android:textSize="13sp"
             app:typeface="SinkinSans-100Thin.ttf" />
@@ -57,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center_horizontal"
-            android:text="Rafael Mosterd   -   Subject Matter Expert"
+            android:text="R. Mostert   -   Analist"
             android:textColor="@android:color/black"
             android:textSize="13sp"
             app:typeface="SinkinSans-100Thin.ttf" />
@@ -67,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center_horizontal"
-            android:text="Jos van Egmond   -   Developer"
+            android:text="J. van Egmond   -   Ontwikkelaar"
             android:textColor="@android:color/black"
             android:textSize="13sp"
             app:typeface="SinkinSans-100Thin.ttf" />
@@ -146,7 +146,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center_horizontal"
-            android:text="Paul Dekkers   -   Technical Support"
+            android:text="P. Dekkers   -   Technical Support"
             android:textColor="@android:color/black"
             android:textSize="13sp"
             app:typeface="SinkinSans-100Thin.ttf" />

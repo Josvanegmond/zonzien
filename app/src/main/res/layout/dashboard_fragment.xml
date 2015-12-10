@@ -424,15 +424,17 @@
             </LinearLayout>
         </LinearLayout>
 
-        <Button
-            android:id="@+id/uploadPhoto"
-            android:layout_width="match_parent"
+        <nl.sterrenkunde.zonno.widget.TextView
+            android:id="@+id/disclaimerText"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="@drawable/redyellowred_gradient"
-            android:text="Upload jouw zonsondergang"
-            android:textColor="@android:color/white"
-            android:textStyle="bold" />
+            android:layout_gravity="right"
+            android:text="@string/open_disclaimer"
+            android:textStyle="bold"
+            android:padding="6dp"
+            android:background="@drawable/lightblue_gradient"
+            app:typeface="SinkinSans-200XLight.ttf" />
 
     </LinearLayout>
 </ScrollView>

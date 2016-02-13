@@ -20,8 +20,6 @@ import nl.sterrenkunde.zonno.Config;
 public enum MZAPIClient {
     INSTANCE;
 
-    private static String _serverUrlString = "http://zonno.sterrenkunde.nl/";
-
     private static final String TAG = MZAPIClient.class.getName();
 
     public enum Request {
@@ -79,7 +77,7 @@ public enum MZAPIClient {
 
     private String _postRequest(APIErrorCallback apiCallback, String... urlAppends) {
 
-        String urlString = _serverUrlString;
+        String urlString = Config.baseUrl;
         if (urlAppends.length > 0) {
             urlString += "?";
         }

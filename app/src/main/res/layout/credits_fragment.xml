@@ -8,19 +8,19 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
         <nl.sterrenkunde.zonno.widget.TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
             android:gravity="center_horizontal"
             android:text="Credits"
             android:textColor="@android:color/black"
             android:textSize="50sp"
-            app:typeface="SinkinSans-100Thin.ttf" />
+            app:typeface="SinkinSans-200XLight.ttf" />
 
         <nl.sterrenkunde.zonno.widget.TextView
             android:layout_width="match_parent"
@@ -30,73 +30,17 @@
             android:text="Team"
             android:textColor="@android:color/black"
             android:textSize="26sp"
-            app:typeface="SinkinSans-100Thin.ttf" />
-
-        <nl.sterrenkunde.zonno.widget.TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center_horizontal"
-            android:text="R. van der Hilst   -   Analist"
-            android:textColor="@android:color/black"
-            android:textSize="13sp"
-            app:typeface="SinkinSans-100Thin.ttf" />
+            app:typeface="SinkinSans-200XLight.ttf" />
 
         <nl.sterrenkunde.zonno.widget.TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center_horizontal"
-            android:text="J. Verberk   -   Designer"
+            android:text="We are a group of four friends who collaborated on the Rijkswaterstaat Open Data Battle to create this app.\n\nThis app has been a fun 7-days hobby project that we did aside our daily lives. We plan to give it a thorough update in the future.\n\nFor contact, visit zonno.sterrenkunde.nl."
             android:textColor="@android:color/black"
             android:textSize="13sp"
-            app:typeface="SinkinSans-100Thin.ttf" />
-
-        <nl.sterrenkunde.zonno.widget.TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center_horizontal"
-            android:text="R. Mostert   -   Analist"
-            android:textColor="@android:color/black"
-            android:textSize="13sp"
-            app:typeface="SinkinSans-100Thin.ttf" />
-
-        <nl.sterrenkunde.zonno.widget.TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center_horizontal"
-            android:text="J. van Egmond   -   Ontwikkelaar"
-            android:textColor="@android:color/black"
-            android:textSize="13sp"
-            app:typeface="SinkinSans-100Thin.ttf" />
-
-
-
-
-        <nl.sterrenkunde.zonno.widget.TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:gravity="center_horizontal"
-            android:text="Initiator"
-            android:textColor="@android:color/black"
-            android:textSize="26sp"
-            app:typeface="SinkinSans-100Thin.ttf" />
-
-        <nl.sterrenkunde.zonno.widget.TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center_horizontal"
-            android:text="Rijkswaterstaat"
-            android:textColor="@android:color/black"
-            android:textSize="13sp"
-            app:typeface="SinkinSans-100Thin.ttf" />
-
-
-
+            app:typeface="SinkinSans-200XLight.ttf" />
 
         <nl.sterrenkunde.zonno.widget.TextView
             android:layout_width="match_parent"
@@ -106,30 +50,17 @@
             android:text="Data providers"
             android:textColor="@android:color/black"
             android:textSize="26sp"
-            app:typeface="SinkinSans-100Thin.ttf" />
+            app:typeface="SinkinSans-200XLight.ttf" />
 
         <nl.sterrenkunde.zonno.widget.TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center_horizontal"
-            android:text="KNMI"
+            android:text="KNMI\nRijkswaterstaat"
             android:textColor="@android:color/black"
             android:textSize="13sp"
-            app:typeface="SinkinSans-100Thin.ttf" />
-
-        <nl.sterrenkunde.zonno.widget.TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center_horizontal"
-            android:text="Rijkswaterstaat"
-            android:textColor="@android:color/black"
-            android:textSize="13sp"
-            app:typeface="SinkinSans-100Thin.ttf" />
-
-
-
+            app:typeface="SinkinSans-200XLight.ttf" />
 
         <nl.sterrenkunde.zonno.widget.TextView
             android:layout_width="match_parent"
@@ -139,17 +70,7 @@
             android:text="Support"
             android:textColor="@android:color/black"
             android:textSize="26sp"
-            app:typeface="SinkinSans-100Thin.ttf" />
-
-        <nl.sterrenkunde.zonno.widget.TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center_horizontal"
-            android:text="P. Dekkers   -   Technical Support"
-            android:textColor="@android:color/black"
-            android:textSize="13sp"
-            app:typeface="SinkinSans-100Thin.ttf" />
+            app:typeface="SinkinSans-200XLight.ttf" />
 
         <nl.sterrenkunde.zonno.widget.TextView
             android:layout_width="match_parent"
@@ -159,8 +80,7 @@
             android:text="Jongerenwerkgroep Sterrenkunde"
             android:textColor="@android:color/black"
             android:textSize="13sp"
-            android:layout_marginBottom="40dp"
-            app:typeface="SinkinSans-100Thin.ttf" />
+            app:typeface="SinkinSans-200XLight.ttf" />
 
     </LinearLayout>
 </ScrollView>

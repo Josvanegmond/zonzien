@@ -2,7 +2,9 @@ package nl.sterrenkunde.zonno.widget;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.res.AssetManager;
 import android.content.res.TypedArray;
+import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.util.AttributeSet;
@@ -47,10 +49,17 @@ public class TextView extends android.widget.TextView {
                 String customTypefacePath = "SinkinSans-200XLight.ttf";
                 TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.nl_sterrenkunde_zonno_widget_TextView);
                 if (typedArray != null) {
-                    customTypefacePath = typedArray.getString(R.styleable.nl_sterrenkunde_zonno_widget_TextView_typeface);
+                    String findCustomTypeFace = typedArray.getString(R.styleable.nl_sterrenkunde_zonno_widget_TextView_typeface);
+                    if (findCustomTypeFace != null) {
+                        customTypefacePath = findCustomTypeFace;
+                    }
+                    typedArray.recycle();
                 }
-                _customTypeface = Typeface.createFromAsset(getContext().getAssets(), customTypefacePath);
+
+                AssetManager assets = getContext().getAssets();
+                _customTypeface = Typeface.createFromAsset(assets, customTypefacePath);
                 setTypeface(_customTypeface);
+                setPaintFlags(Paint.ANTI_ALIAS_FLAG | Paint.DEV_KERN_TEXT_FLAG | Paint.SUBPIXEL_TEXT_FLAG);
             }
         } else {
             setTypeface(_customTypeface);
